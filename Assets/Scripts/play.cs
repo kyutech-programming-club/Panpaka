@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class starttwo : MonoBehaviour
+public class play : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("celectmode");
-    }
+        SceneManager.LoadScene("play");
+    } 
 }

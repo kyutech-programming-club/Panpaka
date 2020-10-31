@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class start : MonoBehaviour
+public class setting : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("regist");
-    }
-    
+        SceneManager.LoadScene("setting");
+    } 
 }

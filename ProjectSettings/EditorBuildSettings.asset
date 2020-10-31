@@ -17,4 +17,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/celectstage.unity
     guid: 105cc0d6792bb904d96616631afb2066
+  - enabled: 1
+    path: Assets/Scenes/information.unity
+    guid: c937c6aa64801254ab9e4b307533843b
+  - enabled: 1
+    path: Assets/Scenes/lanking.unity
+    guid: c0cef337485ce9f44a420ed095569e05
+  - enabled: 1
+    path: Assets/Scenes/play.unity
+    guid: c9b3ed5ff807e7f4ebc16fe8f2563898
+  - enabled: 1
+    path: Assets/Scenes/setting.unity
+    guid: e5d42add82d2cfe41ba9c6da9f82d17d
+  - enabled: 1
+    path: Assets/Scenes/challenge.unity
+    guid: 4aa2b8d9744d0ca48b04ff8b731318de
+  - enabled: 1
+    path: Assets/Scenes/challengetwo.unity
+    guid: 7013ef38d757cef40940de35cb241292
+  - enabled: 1
+    path: Assets/Scenes/challengethree.unity
+    guid: 1a4ae79cf1951354489ae9877ad451a8
   m_configObjects: {}
