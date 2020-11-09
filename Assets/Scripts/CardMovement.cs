@@ -22,7 +22,6 @@ public class CardMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         Debug.Log("OnEndDrag");
         transform.SetParent(parentTransform);
         GetComponent<CanvasGroup>().blocksRaycasts = true;
-        gameObject.transform.Translate(1,1,1);
     }   
     
 

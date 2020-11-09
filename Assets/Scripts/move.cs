@@ -12,10 +12,6 @@ public class move : MonoBehaviour, IDropHandler
         if(dragObj != null){
             dragObj.parentTransform = this.transform;
             Debug.Log(gameObject.name+"に"+data.pointerDrag.name+"をドロップ");
-            if(dragObj.CompareTag("flower"))
-                {
-                    gameObject.transform.Translate(1,1,1);
-                }
         }
     }
 
