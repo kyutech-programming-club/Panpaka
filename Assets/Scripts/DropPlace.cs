@@ -13,7 +13,7 @@ public class DropPlace : MonoBehaviour, IDropHandler
             Debug.Log(gameObject.name+"に"+data.pointerDrag.name+"をドロップ");
             if(dragObj.CompareTag("right"))
                 {
-                    C.transform.Translate(50,0,0);
+                    C.transform.Translate(1,0,0);
                 }
         }
 

@@ -20,10 +20,10 @@ public class goal : MonoBehaviour, IDropHandler
         // 座標を取得
         Vector3 pos = myTransform.position;
 
-        if(myTransform.position.x == 550)
+        if(myTransform.position.x >= 2)
         {   
             if(One){
-                //Debug.Log("hit");
+                Debug.Log("hit");
                 Instantiate (childObject, new Vector3(400,250,0), Quaternion.identity,parent);
                 One = false;
             }

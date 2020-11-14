@@ -4,3 +4,4 @@ Temp/**
 .vscode/settings.json
 *.sln
 *.csproj
+Assets/UnityChan2D*

@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/celectstage.unity
     guid: 105cc0d6792bb904d96616631afb2066
   - enabled: 1
+    path: Assets/Scenes/challenge.unity
+    guid: 4aa2b8d9744d0ca48b04ff8b731318de
+  - enabled: 1
+    path: Assets/Scenes/challengethree.unity
+    guid: 1a4ae79cf1951354489ae9877ad451a8
+  - enabled: 1
+    path: Assets/Scenes/challengetwo.unity
+    guid: 7013ef38d757cef40940de35cb241292
+  - enabled: 1
     path: Assets/Scenes/information.unity
     guid: c937c6aa64801254ab9e4b307533843b
   - enabled: 1
@@ -27,20 +36,11 @@ EditorBuildSettings:
     path: Assets/Scenes/play.unity
     guid: c9b3ed5ff807e7f4ebc16fe8f2563898
   - enabled: 1
-    path: Assets/Scenes/setting.unity
-    guid: e5d42add82d2cfe41ba9c6da9f82d17d
-  - enabled: 1
-    path: Assets/Scenes/challenge.unity
-    guid: 4aa2b8d9744d0ca48b04ff8b731318de
-  - enabled: 1
     path: Assets/Scenes/results.unity
     guid: 7be783a7054635040a85115f62178e4e
   - enabled: 1
-    path: Assets/Scenes/challengetwo.unity
-    guid: 7013ef38d757cef40940de35cb241292
-  - enabled: 1
-    path: Assets/Scenes/challengethree.unity
-    guid: 1a4ae79cf1951354489ae9877ad451a8
+    path: Assets/Scenes/setting.unity
+    guid: e5d42add82d2cfe41ba9c6da9f82d17d
   - enabled: 1
     path: Assets/Scenes/stage.unity
     guid: 1b97aec47d09eaa479b8081ab7016dcd
