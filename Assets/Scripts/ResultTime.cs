@@ -3,19 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimeCount : MonoBehaviour {
-
-    //時間を記録する小数も入る変数.
+public class ResultTime : MonoBehaviour
+{
+    float time;
     Text text;
-    public GameObject C;
-    public static float time = 0f;
-    
-    void Start () {
-        text = GetComponent<Text>();//自分のインスペクター内からTextコンポーネントを取得.
-    }
-	
-    void Update () {
-        time += Time.deltaTime;//毎フレームの時間を加算.
+    // Start is called before the first frame update
+    void Start()
+    {
+        text = GetComponent<Text>();
+        time = TimeCount.getTime();
         int minute = (int)time/60;//分.timeを60で割った値.
         int second = (int)time%60;//秒.timeを60で割った余り.
         int msecond = (int)(time*100%100);
@@ -37,16 +33,11 @@ public class TimeCount : MonoBehaviour {
             msecText = msecond.ToString ();
 
         text.text = "[Time] " + minText + ":" + secText + "." + msecText ;
-
-        if(C.transform.position.x >= 2)
-        {
-            Time.timeScale = 0;
-        }
     }
 
-    public static float getTime()
+    // Update is called once per frame
+    void Update()
     {
-        return time;
+        
     }
-
 }
