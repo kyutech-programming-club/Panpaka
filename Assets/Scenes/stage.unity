@@ -649,10 +649,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 662655379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e9c1b3dffdd3cd4583b3e1003d87d02, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a0152e6c9da34b73a86cf8b63b544e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  maxSpeed: 10
+  jumpPower: 1000
+  backwardForce: {x: -4.5, y: 5.4}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &707482406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1427,6 +1432,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   C: {fileID: 662655379}
+  childObject: {fileID: 4653027698993281088, guid: 3ba5f4c5197fe184fae1c2a50a180812,
+    type: 3}
+  parent: {fileID: 1094748212}
 --- !u!1 &2132963702
 GameObject:
   m_ObjectHideFlags: 0
