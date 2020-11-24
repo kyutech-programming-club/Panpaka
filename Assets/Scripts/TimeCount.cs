@@ -22,7 +22,6 @@ public class TimeCount : MonoBehaviour {
             }
             else
             {
-                Time.timeScale = 1;
                 time += Time.deltaTime;//毎フレームの時間を加算.
                 int minute = (int)time/60;//分.timeを60で割った値.
                 int second = (int)time%60;//秒.timeを60で割った余り.
@@ -47,8 +46,7 @@ public class TimeCount : MonoBehaviour {
                 text.text = "[Time] " + minText + ":" + secText + "." + msecText ;
             } 
             
-        
-        
+        Time.timeScale = 1;
     }
 
     public static float getTime()
