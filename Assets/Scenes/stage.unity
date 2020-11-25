@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 3974487198650789878, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
       propertyPath: m_Name
-      value: Panel (2)
+      value: jump
       objectReference: {fileID: 0}
     - target: {fileID: 3974487198650789878, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
@@ -201,12 +201,12 @@ PrefabInstance:
     - target: {fileID: 3974487198650789879, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 12.799988
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3974487198650789879, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -68.25488
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 3974487198650789879, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
@@ -354,7 +354,7 @@ PrefabInstance:
     - target: {fileID: 3974487198650789878, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
       propertyPath: m_Name
-      value: Panel
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 3974487198650789878, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
@@ -494,7 +494,7 @@ PrefabInstance:
     - target: {fileID: 3974487198650789878, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
       propertyPath: m_Name
-      value: Panel (1)
+      value: left
       objectReference: {fileID: 0}
     - target: {fileID: 3974487198650789878, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
@@ -559,12 +559,12 @@ PrefabInstance:
     - target: {fileID: 3974487198650789879, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 12.799988
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3974487198650789879, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.7999878
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 3974487198650789879, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
@@ -649,15 +649,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 662655379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0152e6c9da34b73a86cf8b63b544e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e9c1b3dffdd3cd4583b3e1003d87d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
-  jumpPower: 1000
-  backwardForce: {x: -4.5, y: 5.4}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!1001 &707482406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -733,12 +727,12 @@ PrefabInstance:
     - target: {fileID: 3974487198650789879, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 12.799988
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3974487198650789879, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -118.25488
+      value: -81.745
       objectReference: {fileID: 0}
     - target: {fileID: 3974487198650789879, guid: c8e831ea509955d4d82cd6f4837c7ea3,
         type: 3}
@@ -1053,7 +1047,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 1355a58c3bd9c40679bea54b926e0179, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 3a2e89326cda64858a11433ffce27df7, type: 2}
+      objectReference: {fileID: 9100000, guid: 9650018f76c4613449cff783469dc804, type: 2}
     - target: {fileID: 11400000, guid: 1355a58c3bd9c40679bea54b926e0179, type: 3}
       propertyPath: jumpPower
       value: 500
@@ -1226,7 +1220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -375, y: 27.8}
+  m_AnchoredPosition: {x: -375, y: 22.772}
   m_SizeDelta: {x: -750, y: -55.54419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659783770
