@@ -23,7 +23,7 @@ public class goal : MonoBehaviour, IDropHandler
         if(myTransform.position.x >= 2)
         {   
             if(One){
-                Debug.Log("hit");
+                // Debug.Log("hit");
                 Instantiate (childObject, new Vector3(400,250,0), Quaternion.identity,parent);
                 One = false;
             }
