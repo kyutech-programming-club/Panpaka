@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class Ranking : MonoBehaviour
 {
     Text RankingText;
+    public int StageId;
     void Start()
     {
         RankingText = GetComponent<Text>();
         NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject>("Result");
-        query.WhereEqualTo("stageId", 1);
+        query.WhereEqualTo("stageId", StageId);
         query.OrderByAscending("time");
         query.Limit = 5;
         query.FindAsync((List<NCMBObject> objList, NCMBException err) =>

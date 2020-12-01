@@ -49,7 +49,7 @@ public class ResultTime : MonoBehaviour
         NCMBObject result = new NCMBObject("Result");
         result["uName"] = NCMBUser.CurrentUser.UserName;
         result["time"] = time;
-        result["stageId"] = 1;
+        result["stageId"] = StageManager.StageId;
 
         result.SaveAsync((NCMBException e) =>
         {
