@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Collections;
 
 public class DropPlace : MonoBehaviour, IDropHandler
 {
     public GameObject C;
     public GameObject childObject;
     public Transform parent;
+
 
     public void OnDrop(PointerEventData data){
         Debug.Log(gameObject.name);
@@ -42,6 +46,11 @@ public class DropPlace : MonoBehaviour, IDropHandler
             if(dragObj.CompareTag("down"))
                 {
                      C.transform.Translate(0,-1,0);
+                }
+            if(dragObj.CompareTag("rightRun"))
+                {
+                    C.GetComponent<UnityChanAttempt>().Runx();
+                    //  C.transform.Translate(1,0,0);
                 }
         }
 

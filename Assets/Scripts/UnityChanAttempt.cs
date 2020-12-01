@@ -11,12 +11,14 @@ public class UnityChanAttempt : MonoBehaviour {
 	// 設定したフラグの名前
 	public const string key_isRun = "isRun";
 	public const string key_isJumpup = "isJumpup";
+	// public InputField inputField;
+
+	public Text hosuu;
 
 	// 初期化メソッド
 	void Start () {
 		// 自分に設定されているAnimatorコンポーネントを習得する
 		this.animator = GetComponent<Animator>();
-		
 	}
 
 	public void RightRun()
@@ -47,10 +49,23 @@ public class UnityChanAttempt : MonoBehaviour {
 	}
 	
 	// 1フレームに1回コールされる
-	void Update () 
+	public void Runx()
 	{
+			// Wait or RunからJumpに遷移する
+			this.animator.SetBool(key_isRun, true);
+			GameObject inputField = GameObject.Find("InputField");
+			// Text input = inputField.GetComponent<InputField>();
 
+			// Debug.Log(hosuu.text);
+			float x = float.Parse(hosuu.text.ToString());
+			this.transform.Translate(x,0,0);
+			// JumpからWait or Runに遷移する
+			Invoke("DelayMethod", 0.05f);
 	}
+	
+	
+	
+	
 
 	void DelayMethod()
     {

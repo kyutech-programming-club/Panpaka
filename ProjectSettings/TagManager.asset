@@ -9,6 +9,7 @@ TagManager:
   - left
   - up
   - down
+  - rightRun
   layers:
   - Default
   - TransparentFX
