@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using NCMB;
 
 public class ResultTime : MonoBehaviour
 {
@@ -32,12 +33,36 @@ public class ResultTime : MonoBehaviour
         else
             msecText = msecond.ToString ();
 
-        text.text = "[Time] " + minText + ":" + secText + "." + msecText ;
+        text.text = "[Time] " + minText + ":" + secText + "." + msecText;
+
+        SaveResult(time);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void SaveResult(float time)
+    {
+        NCMBObject result = new NCMBObject("Result");
+        result["uName"] = NCMBUser.CurrentUser.UserName;
+        result["time"] = time;
+        result["stageId"] = StageManager.StageId;
+
+        result.SaveAsync((NCMBException e) =>
+        {
+            if (e != null)
+            {
+                //エラー
+                Debug.Log("errrr");
+            }
+            else
+            {
+                //成功時の処理
+                Debug.Log("successsss");
+            }
+        });
     }
 }
