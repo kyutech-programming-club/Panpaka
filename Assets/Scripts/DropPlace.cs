@@ -50,7 +50,10 @@ public class DropPlace : MonoBehaviour, IDropHandler
             if(dragObj.CompareTag("rightRun"))
                 {
                     C.GetComponent<UnityChanAttempt>().Runx();
-                    //  C.transform.Translate(1,0,0);
+                }
+            if(dragObj.CompareTag("leftRun"))
+                {
+                    C.GetComponent<UnityChanAttempt>().Runy();
                 }
         }
 

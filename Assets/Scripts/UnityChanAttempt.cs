@@ -14,6 +14,7 @@ public class UnityChanAttempt : MonoBehaviour {
 	// public InputField inputField;
 
 	public Text hosuu;
+	public Text runy;
 
 	// 初期化メソッド
 	void Start () {
@@ -54,8 +55,6 @@ public class UnityChanAttempt : MonoBehaviour {
 			// Wait or RunからJumpに遷移する
 			this.animator.SetBool(key_isRun, true);
 			GameObject inputField = GameObject.Find("InputField");
-			// Text input = inputField.GetComponent<InputField>();
-
 			// Debug.Log(hosuu.text);
 			float x = float.Parse(hosuu.text.ToString());
 			this.transform.Translate(x,0,0);
@@ -63,7 +62,17 @@ public class UnityChanAttempt : MonoBehaviour {
 			Invoke("DelayMethod", 0.05f);
 	}
 	
-	
+	public void Runy()
+	{
+			// Wait or RunからJumpに遷移する
+			this.animator.SetBool(key_isRun, true);
+			GameObject inputField = GameObject.Find("InputField");
+			// Debug.Log(hosuu.text);
+			float y = float.Parse(runy.text.ToString());
+			this.transform.Translate(-y,0,0);
+			// JumpからWait or Runに遷移する
+			Invoke("DelayMethod", 0.05f);
+	}
 	
 	
 
