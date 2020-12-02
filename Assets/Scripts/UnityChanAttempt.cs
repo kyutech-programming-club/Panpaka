@@ -57,6 +57,10 @@ public class UnityChanAttempt : MonoBehaviour {
 			GameObject inputField = GameObject.Find("InputField");
 			// Debug.Log(hosuu.text);
 			float x = float.Parse(hosuu.text.ToString());
+			if(x >= 10)
+			{
+				x = 10;
+			}
 			this.transform.Translate(x,0,0);
 			// JumpからWait or Runに遷移する
 			Invoke("DelayMethod", 0.05f);
@@ -69,6 +73,10 @@ public class UnityChanAttempt : MonoBehaviour {
 			GameObject inputField = GameObject.Find("InputField");
 			// Debug.Log(hosuu.text);
 			float y = float.Parse(runy.text.ToString());
+			if(y >= 10)
+			{
+				y = 10;
+			}
 			this.transform.Translate(-y,0,0);
 			// JumpからWait or Runに遷移する
 			Invoke("DelayMethod", 0.05f);
