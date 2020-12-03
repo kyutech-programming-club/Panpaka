@@ -22,6 +22,23 @@ public class UnityChanAttempt : MonoBehaviour {
 		this.animator = GetComponent<Animator>();
 	}
 
+	public void RightRunOnWhile()
+	{
+		// WaitからRunに遷移する
+		this.animator.SetBool(key_isRun, true);
+		this.transform.Translate(0.1f, 0, 0);
+		Invoke("DelayMethod", 0.05f);
+		// RunからWaitに遷移する
+	}
+	public void LeftRunOnWhile()
+	{
+		// WaitからRunに遷移する
+		this.animator.SetBool(key_isRun, true);
+		this.transform.Translate(-0.1f, 0, 0);
+		Invoke("DelayMethod", 0.05f);
+		// RunからWaitに遷移する
+	}
+
 	public void RightRun()
 	{
 			// WaitからRunに遷移する
