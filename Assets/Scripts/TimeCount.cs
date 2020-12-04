@@ -15,7 +15,7 @@ public class TimeCount : MonoBehaviour
     }
     void Update()
     {
-        if (C.transform.position.x >= 2 || C.transform.position.x <= -8)
+        if (C.transform.position.x >= 8 && C.transform.position.y <= -3)
         {
             Time.timeScale = 0;
         }
