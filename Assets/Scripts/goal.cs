@@ -20,7 +20,7 @@ public class goal : MonoBehaviour, IDropHandler
         // 座標を取得
         Vector3 pos = myTransform.position;
 
-        if(myTransform.position.x >= 2)
+        if(myTransform.position.x >= 8)
         {   
             if(One){
                 // Debug.Log("hit");
