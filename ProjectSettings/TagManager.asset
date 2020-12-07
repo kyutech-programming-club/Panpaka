@@ -11,6 +11,8 @@ TagManager:
   - down
   - rightRun
   - leftRun
+  - object
+  - if
   layers:
   - Default
   - TransparentFX

@@ -13,12 +13,7 @@ public class DropPlaceOnWhile : MonoBehaviour, IDropHandler
 
     void FixedUpdate()
     {
-        if (gameObject.transform.childCount > 0)
-        {
-            GameObject childObject = gameObject.transform.GetChild(0).gameObject;
-            Debug.Log(childObject.name + "tetta");
-        }
-        else
+        if (gameObject.transform.childCount == 0)
         {
             ToDoTaskName = "";
         }
@@ -44,8 +39,16 @@ public class DropPlaceOnWhile : MonoBehaviour, IDropHandler
         if (dragObj != null)
         {
             dragObj.parentTransform = this.transform;
-            Debug.Log(gameObject.name + "に" + data.pointerDrag.name + "をドロップ");
-            ToDoTaskName = dragObj.tag;
+            Debug.Log(gameObject.name + "に" + data.pointerDrag.name + "をドロップ(while)");
+            if (dragObj.tag == "if")
+            {
+                C.GetComponent<UnityChanAttempt>().ActivateOnCollisionStayOnWhile();
+            }
+            else 
+            {
+                ToDoTaskName = dragObj.tag;
+            }
+            
         }
     }
 }

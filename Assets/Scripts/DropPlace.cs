@@ -18,7 +18,7 @@ public class DropPlace : MonoBehaviour, IDropHandler
         if(dragObj != null)
         {
             dragObj.parentTransform = this.transform;
-            Debug.Log(gameObject.name+"に"+data.pointerDrag.name+"をドロップ");
+            Debug.Log(gameObject.name+"に"+data.pointerDrag.name+"をドロップ(field)");
             if (dragObj.CompareTag("right"))
             {
                 C.GetComponent<UnityChanAttempt>().RightRun();
@@ -52,6 +52,10 @@ public class DropPlace : MonoBehaviour, IDropHandler
             if (dragObj.CompareTag("leftRun"))
             {
                 C.GetComponent<UnityChanAttempt>().Runy();
+            }
+            if (dragObj.CompareTag("if"))
+            {
+                C.GetComponent<UnityChanAttempt>().ActivateOnCollisionStay();
             }
         }
     }

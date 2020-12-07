@@ -11,7 +11,7 @@ public class move : MonoBehaviour, IDropHandler
         CardMovement dragObj = data.pointerDrag.GetComponent<CardMovement>();
         if(dragObj != null){
             dragObj.parentTransform = this.transform;
-            Debug.Log(gameObject.name+"に"+data.pointerDrag.name+"をドロップ");
+            Debug.Log(gameObject.name+"に"+data.pointerDrag.name+"をドロップ(move)");
         }
     }
 
