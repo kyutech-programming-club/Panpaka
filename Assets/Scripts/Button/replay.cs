@@ -7,7 +7,6 @@ public class replay : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        StageManager.StageId = 1;
         SceneManager.LoadScene("stage");
     }
 }
