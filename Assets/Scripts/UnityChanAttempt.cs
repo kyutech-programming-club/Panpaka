@@ -91,9 +91,6 @@ public class UnityChanAttempt : MonoBehaviour {
 			// JumpからWait or Runに遷移する
 			Invoke("DelayMethod", 0.05f);
 	}
-	
-	
-
 	void DelayMethod()
     {
         this.animator.SetBool(key_isJumpup, false);

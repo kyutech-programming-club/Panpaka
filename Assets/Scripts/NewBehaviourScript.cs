@@ -57,7 +57,7 @@ public class NewBehaviourScript : MonoBehaviour {
         if(other.gameObject.tag == "Player"){
             //オブジェクトの色を赤に変更する
             // GetComponent<Renderer>().material.color = Color.red;
-            Instantiate (childObject, new Vector3(400,250,0), Quaternion.identity,parent);
+            Instantiate (childObject, new Vector3(500,250,0), Quaternion.identity,parent);
             // Debug.Log("Hit");
             Time.timeScale = 0;
         }
