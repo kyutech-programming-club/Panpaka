@@ -22,6 +22,16 @@ public class UnityChanAttempt : MonoBehaviour {
 		this.animator = GetComponent<Animator>();
 	}
 
+	void OnCollisionEnter2D(Collision2D other)
+    {
+        //接触したオブジェクトのタグが"Player"のとき
+        if(other.gameObject.tag == "Player"){
+            //オブジェクトの色を赤に変更する
+            GetComponent<Renderer>().material.color = Color.red;
+            Debug.Log("Hit");
+        }
+    }
+
 	public void RightRun()
 	{
 			// WaitからRunに遷移する
