@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class CardMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
     public Transform parentTransform;
-    public GameObject target;
     public GameObject C;
 
     public void OnBeginDrag(PointerEventData data){
