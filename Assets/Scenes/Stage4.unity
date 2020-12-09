@@ -1925,6 +1925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf470ec72f00cb488f9ddee56b1b33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initPosition: {x: -2.5, y: 3.64, z: 0}
   PlayerField: {fileID: 466085965}
   C: {fileID: 2120460620}
   CommandText: {fileID: 1124801187}
@@ -2862,11 +2863,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1355a58c3bd9c40679bea54b926e0179, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.15
+      value: -2.49
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1355a58c3bd9c40679bea54b926e0179, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.28
+      value: 3.64
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1355a58c3bd9c40679bea54b926e0179, type: 3}
       propertyPath: m_LocalPosition.z

@@ -8,12 +8,14 @@ public class RunCommand : MonoBehaviour
 {
     private Vector3 oldPosition;
     private Queue<string> commandsQueue = new Queue<string>();
+    public Vector3 initPosition;
     public GameObject PlayerField;
     public GameObject C;
     public Text CommandText;
 
     public void OnClick()
     {
+        gameObject.GetComponent<Button>().interactable = false;
         StartCoroutine(Run());
     }
 
@@ -115,6 +117,8 @@ public class RunCommand : MonoBehaviour
             }
             yield return new WaitForSeconds(2.0f);
         }
+        gameObject.GetComponent<Button>().interactable = true;
+        C.transform.position = initPosition;
     }
 
     public void GetAllChildObjects()
