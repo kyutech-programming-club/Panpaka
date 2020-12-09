@@ -100,9 +100,9 @@ public class RunCommand : MonoBehaviour
                                     break;
                             }
                             yield return new WaitForSeconds(1.0f);
+
                         }
                         
-                        yield return new WaitForSeconds(1.0f);
                         Vector3 currentPosition = C.transform.position;
                         if (oldPosition == currentPosition)
                         {
