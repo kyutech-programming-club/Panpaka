@@ -346,6 +346,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoginSigninCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 114356939720886120, guid: cd4dc5ae4448c47c49ad94f99931fd55,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 144749709aa94d54187bb80b96fae9c8,
+        type: 3}
+    - target: {fileID: 114356939720886120, guid: cd4dc5ae4448c47c49ad94f99931fd55,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114888532490175672, guid: cd4dc5ae4448c47c49ad94f99931fd55,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 144749709aa94d54187bb80b96fae9c8,
+        type: 3}
+    - target: {fileID: 114888532490175672, guid: cd4dc5ae4448c47c49ad94f99931fd55,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224018984669978230, guid: cd4dc5ae4448c47c49ad94f99931fd55,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -449,6 +471,16 @@ PrefabInstance:
     - target: {fileID: 224018984669978230, guid: cd4dc5ae4448c47c49ad94f99931fd55,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224348985615005358, guid: cd4dc5ae4448c47c49ad94f99931fd55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -156
+      objectReference: {fileID: 0}
+    - target: {fileID: 224348985615005358, guid: cd4dc5ae4448c47c49ad94f99931fd55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
