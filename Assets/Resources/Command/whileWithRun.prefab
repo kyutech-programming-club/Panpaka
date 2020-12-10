@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2394669428840301849}
   - component: {fileID: 2394669428840301851}
   - component: {fileID: 2394669428840301848}
+  - component: {fileID: 9005371665948109828}
   m_Layer: 5
   m_Name: while
   m_TagString: Untagged
@@ -74,6 +75,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9005371665948109828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2394669428840301854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4417df8e24182a745abe5779e0192562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  right: {fileID: 974643755960452485, guid: 05848d8c8a751e9448fe91b1b2fa0d77, type: 3}
+  left: {fileID: 4892079829789750461, guid: 7d6bb52353237b54dbf69873e2065bd0, type: 3}
+  jump: {fileID: 6639751586838510314, guid: 745be4ce4deb0c4479ab9b3c2bce2ddf, type: 3}
+  down: {fileID: 477116887791895061, guid: f828461b15eb1514b808a1ed1aa59870, type: 3}
+  rightRun: {fileID: 1450234584044289561, guid: f342a0e26d7dfae449818a31aead1347,
+    type: 3}
+  leftRun: {fileID: 7785050122298048432, guid: 7159e954518b47e468e1654e7d9198ac, type: 3}
+  _whileWithRun: {fileID: 7614761793456521370}
+  _if: {fileID: 4295246033135974813, guid: 75fa24a1d8ab28043a708ee9b23af24b, type: 3}
 --- !u!1 &7614761793456521370
 GameObject:
   m_ObjectHideFlags: 0
