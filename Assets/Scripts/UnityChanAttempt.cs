@@ -104,34 +104,34 @@ public class UnityChanAttempt : MonoBehaviour {
 	// 1フレームに1回コールされる
 	public void Runx()
 	{
-			// Wait or RunからJumpに遷移する
-			this.animator.SetBool(key_isRun, true);
-			GameObject inputField = GameObject.Find("InputField");
-			// Debug.Log(hosuu.text);
-			float x = float.Parse(hosuu.text.ToString());
-			if(x >= 10)
-			{
-				x = 10;
-			}
-			this.transform.Translate(x,0,0);
-			// JumpからWait or Runに遷移する
-			Invoke("DelayMethod", 0.05f);
+		// Wait or RunからJumpに遷移する
+		this.animator.SetBool(key_isRun, true);
+		string numStr = hosuu.text.ToString();
+		if (numStr == "") numStr = "0";
+		float x = float.Parse(numStr);
+		if(x >= 10)
+		{
+			x = 10;
+		}
+		this.transform.Translate(x,0,0);
+		// JumpからWait or Runに遷移する
+		Invoke("DelayMethod", 0.05f);
 	}
 	
 	public void Runy()
 	{
-			// Wait or RunからJumpに遷移する
-			this.animator.SetBool(key_isRun, true);
-			GameObject inputField = GameObject.Find("InputField");
-			// Debug.Log(hosuu.text);
-			float y = float.Parse(runy.text.ToString());
-			if(y >= 10)
-			{
-				y = 10;
-			}
-			this.transform.Translate(-y,0,0);
-			// JumpからWait or Runに遷移する
-			Invoke("DelayMethod", 0.05f);
+		// Wait or RunからJumpに遷移する
+		this.animator.SetBool(key_isRun, true);
+		string numStr = runy.text.ToString();
+		if (numStr == "") numStr = "0";
+		float y = float.Parse(numStr);
+		if(y >= 10)
+		{
+			y = 10;
+		}
+		this.transform.Translate(-y,0,0);
+		// JumpからWait or Runに遷移する
+		Invoke("DelayMethod", 0.05f);
 	}
 	void DelayMethod()
     {
