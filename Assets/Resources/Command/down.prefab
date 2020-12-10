@@ -115,7 +115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 35.400024}
+  m_AnchoredPosition: {x: 75, y: 314}
   m_SizeDelta: {x: 1016.09814, y: 59.966064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &477116887791895058
@@ -180,4 +180,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentTransform: {fileID: 477116887791895060}
-  target: {fileID: 0}
+  C: {fileID: 0}
