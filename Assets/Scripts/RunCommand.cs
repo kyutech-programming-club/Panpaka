@@ -7,7 +7,7 @@ using System;
 public class RunCommand : MonoBehaviour
 {
     private Vector3 oldPosition;
-    private Queue<string> commandsQueue = new Queue<string>();
+    private Queue<GameObject> commandsQueue = new Queue<GameObject>();
     public Vector3 initPosition;
     public GameObject PlayerField;
     public GameObject C;
@@ -23,24 +23,10 @@ public class RunCommand : MonoBehaviour
     {
         GetAllChildObjects();
 
-        GameObject whileObject = GameObject.FindGameObjectWithTag("while");
-        GameObject[] ChildObjects = new GameObject[whileObject.transform.childCount];
-
-        for (int i = 0; i < whileObject.transform.childCount; i++)
-        {
-            ChildObjects[i] = whileObject.transform.GetChild(i).gameObject;
-        }
-        string[] commandsOnWhile = new string[ChildObjects.Length];
-        Array.Sort(ChildObjects, (a, b) => (int)b.transform.position.y - (int)a.transform.position.y);
-
-        for (int i = 0; i < ChildObjects.Length; i++)
-        {
-            commandsOnWhile[i] = ChildObjects[i].name;
-        }
-
         for (; commandsQueue.Count != 0;)
         {
-            string command = commandsQueue.Dequeue();
+            GameObject commandObj = commandsQueue.Dequeue();
+            string command = commandObj.tag;
             CommandText.text = command;
             switch (command)
             {
@@ -50,7 +36,7 @@ public class RunCommand : MonoBehaviour
                 case "left":
                     C.GetComponent<UnityChanAttempt>().LeftRun();
                     break;
-                case "jump":
+                case "up":
                     C.GetComponent<UnityChanAttempt>().Jump();
                     break;
                 case "down":
@@ -70,6 +56,22 @@ public class RunCommand : MonoBehaviour
                 case "while":
                     while(true)
                     {
+                        GameObject whileCommand = commandObj.transform.GetChild(1).gameObject;
+                        GameObject[] ChildObjects = new GameObject[whileCommand.transform.childCount];
+
+                        for (int i = 0; i < whileCommand.transform.childCount; i++)
+                        {
+                            ChildObjects[i] = whileCommand.transform.GetChild(i).gameObject;
+                        }
+                        string[] commandsOnWhile = new string[ChildObjects.Length];
+                        Array.Sort(ChildObjects, (a, b) => (int)b.transform.position.y - (int)a.transform.position.y);
+
+                        for (int i = 0; i < ChildObjects.Length; i++)
+                        {
+                            commandsOnWhile[i] = ChildObjects[i].tag;
+                            Debug.Log(commandsOnWhile[i]);
+                        }
+
                         oldPosition = C.transform.position;
                         foreach (string commandOnWhile in commandsOnWhile)
                         {
@@ -81,7 +83,7 @@ public class RunCommand : MonoBehaviour
                                 case "left":
                                     C.GetComponent<UnityChanAttempt>().LeftRun();
                                     break;
-                                case "jump":
+                                case "up":
                                     C.GetComponent<UnityChanAttempt>().Jump();
                                     break;
                                 case "down":
@@ -100,7 +102,6 @@ public class RunCommand : MonoBehaviour
                                     break;
                             }
                             yield return new WaitForSeconds(1.0f);
-
                         }
                         
                         Vector3 currentPosition = C.transform.position;
@@ -134,8 +135,10 @@ public class RunCommand : MonoBehaviour
 
         for (int i = 0; i < ChildObjects.Length; i++)
         {
-            commandsQueue.Enqueue(ChildObjects[i].name);
+            commandsQueue.Enqueue(ChildObjects[i]);
         }
-        commandsQueue.Enqueue("lastCommand");
+        GameObject last = new GameObject("lastCommand");
+        last.tag = "lastCommand";
+        commandsQueue.Enqueue(last);
     }
 }
