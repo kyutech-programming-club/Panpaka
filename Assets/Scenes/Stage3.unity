@@ -2711,6 +2711,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8431202954385560715, guid: 1355a58c3bd9c40679bea54b926e0179,
+        type: 3}
+      propertyPath: runy
+      value: 
+      objectReference: {fileID: 1608622770}
+    - target: {fileID: -8431202954385560715, guid: 1355a58c3bd9c40679bea54b926e0179,
+        type: 3}
+      propertyPath: hosuu
+      value: 
+      objectReference: {fileID: 627651582}
     - target: {fileID: 100000, guid: 1355a58c3bd9c40679bea54b926e0179, type: 3}
       propertyPath: m_Name
       value: UnityChan2D
