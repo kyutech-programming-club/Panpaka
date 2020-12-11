@@ -22,7 +22,7 @@ public class ResultTime : MonoBehaviour
         text.text += "\n================";
         text.text += "\n[点数] " + ChangeTimeToString(time + (float)(commandCount*5));
 
-        //SaveResult(time);
+        SaveResult(time);
     }
 
     string ChangeTimeToString(float time)
