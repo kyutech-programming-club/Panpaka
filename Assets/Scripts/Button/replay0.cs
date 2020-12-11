@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class stage0 : MonoBehaviour
+public class replay0 : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("challenge0");
+        SceneManager.LoadScene("stage0");
     } 
 }
