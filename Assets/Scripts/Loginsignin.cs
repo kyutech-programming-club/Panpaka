@@ -44,7 +44,7 @@ public class Loginsignin : MonoBehaviour
 				UnityEngine.Debug.Log ("ログインに成功！");
                 // テキストの表示を入れ替える
                 debug_text.text = "ログインに成功";
-				SceneManager.LoadScene("celectmode");
+				SceneManager.LoadScene("celectmode");;
 			}
 		});
 
