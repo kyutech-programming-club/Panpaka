@@ -14,6 +14,8 @@ TagManager:
   - object
   - if
   - while
+  - lastCommand
+  - floor
   layers:
   - Default
   - TransparentFX
