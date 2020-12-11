@@ -8,7 +8,7 @@ public class CardMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public GameObject C;
 
     public void OnBeginDrag(PointerEventData data){
-        Debug.Log("OnBeginDrag");
+        //Debug.Log("OnBeginDrag");
         GetComponent<CanvasGroup>().blocksRaycasts = false;
         parentTransform = transform.parent;
         transform.SetParent(transform.parent.parent);
@@ -23,7 +23,7 @@ public class CardMovement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     }
 
     public void OnEndDrag(PointerEventData data){
-        Debug.Log("OnEndDrag");
+        //Debug.Log("OnEndDrag");
         transform.SetParent(parentTransform);
         GetComponent<CanvasGroup>().blocksRaycasts = true;
     }    

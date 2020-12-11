@@ -16,6 +16,7 @@ public class RunCommand : MonoBehaviour
     public void OnClick()
     {
         gameObject.GetComponent<Button>().interactable = false;
+        CommandCount.Reset();
         StartCoroutine(Run());
     }
 
@@ -69,7 +70,7 @@ public class RunCommand : MonoBehaviour
                         for (int i = 0; i < ChildObjects.Length; i++)
                         {
                             commandsOnWhile[i] = ChildObjects[i].tag;
-                            Debug.Log(commandsOnWhile[i]);
+                            CommandCount.Add();
                         }
 
                         oldPosition = C.transform.position;
@@ -135,6 +136,7 @@ public class RunCommand : MonoBehaviour
 
         for (int i = 0; i < ChildObjects.Length; i++)
         {
+            CommandCount.Add();
             commandsQueue.Enqueue(ChildObjects[i]);
         }
         GameObject last = new GameObject("lastCommand");

@@ -9,10 +9,15 @@ public class DropPlace : MonoBehaviour, IDropHandler
     public GameObject C;
     public GameObject childObject;
     public Transform parent;
-  
 
-    public void OnDrop(PointerEventData data){
-        Debug.Log(gameObject.name);
+    private void Start()
+    {
+        CommandCount.Reset();
+    }
+
+    public void OnDrop(PointerEventData data)
+    {
+        CommandCount.Add();
 
         CardMovement dragObj = data.pointerDrag.GetComponent<CardMovement>();
         if(dragObj != null)
