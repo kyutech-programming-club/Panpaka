@@ -14,6 +14,6 @@ public class CountText : MonoBehaviour
 
     void Update()
     {
-        text.text = CommandCount.count.ToString();
+        text.text = "使用コマンド回数 " + CommandCount.count.ToString();
     }
 }
