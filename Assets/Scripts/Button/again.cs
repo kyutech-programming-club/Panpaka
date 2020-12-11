@@ -7,6 +7,10 @@ public class again : MonoBehaviour
 {
     public void OnClickStartButton()
     {
+        if(StageManager.StageId == 0)
+        {
+            SceneManager.LoadScene("stage0");
+        }
         if(StageManager.StageId == 1)
         {
             SceneManager.LoadScene("stage");

@@ -7,6 +7,10 @@ public class next : MonoBehaviour
 {
     public void OnClickStartButton()
     {
+        if(StageManager.StageId == 0)
+        {
+            SceneManager.LoadScene("stage");
+        }
         if(StageManager.StageId == 1)
         {
             SceneManager.LoadScene("stage2");
@@ -21,7 +25,7 @@ public class next : MonoBehaviour
         }
         if(StageManager.StageId == 4)
         {
-            SceneManager.LoadScene("stage5");
+            SceneManager.LoadScene("celectmode");
         }
     }
 }
