@@ -668,7 +668,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1023300916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce72781e3d630e247bca6f5c3185f53c, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b957480654f624f9c09a7f00701d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1023300919
@@ -715,7 +715,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1023300918}
-        m_MethodName: OnClickStartButton
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
