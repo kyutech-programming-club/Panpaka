@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class stage0 : MonoBehaviour
+public class stage4 : MonoBehaviour
 {
     public void OnClickStartButton()
     {
