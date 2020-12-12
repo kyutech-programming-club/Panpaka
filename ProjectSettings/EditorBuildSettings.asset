@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/regist.unity
     guid: d591e16688addbf4c8d590e8e3beb1fc
   - enabled: 1
@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/challengetwo.unity
     guid: 7013ef38d757cef40940de35cb241292
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/information.unity
     guid: c937c6aa64801254ab9e4b307533843b
   - enabled: 1
@@ -44,4 +44,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/stage.unity
     guid: 1b97aec47d09eaa479b8081ab7016dcd
+  - enabled: 1
+    path: Assets/Scenes/stage2.unity
+    guid: 77aecab019cfe1f4f909bd5bf11940c2
+  - enabled: 1
+    path: Assets/Scenes/Stage3.unity
+    guid: 51f3f413cfb55c647a5423404a88e5ae
+  - enabled: 1
+    path: Assets/Scenes/stage0.unity
+    guid: 10441f012f9587647b81c446c41b8919
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/challenge4.unity
+    guid: aca235201dc57e5479bc413e924b8e7f
+  - enabled: 1
+    path: Assets/Scenes/challenge0.unity
+    guid: 7110084102477904996c4dd26f7e684c
+  - enabled: 1
+    path: Assets/Scenes/Stage4.unity
+    guid: 464736a7d5f054947b9e47d0e70066d8
+  - enabled: 1
+    path: Assets/Scenes/UserStage.unity
+    guid: 4a25abb32bc7ab043b7e23e3e31d8ea9
   m_configObjects: {}
