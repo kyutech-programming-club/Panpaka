@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class UnityChanAttempt : MonoBehaviour {
 
@@ -101,38 +102,60 @@ public class UnityChanAttempt : MonoBehaviour {
 			Invoke("DelayMethod", 0.05f);
 	}
 	
-	// 1フレームに1回コールされる
-	public void Runx()
+	public float GetRightInput()
 	{
-		// Wait or RunからJumpに遷移する
-		this.animator.SetBool(key_isRun, true);
 		string numStr = hosuu.text.ToString();
 		if (numStr == "") numStr = "0";
 		float x = float.Parse(numStr);
-		if(x >= 10)
+		if (x >= 10)
 		{
 			x = 10;
 		}
-		this.transform.Translate(x,0,0);
+		return x;
+	}
+
+	public IEnumerator Runx()
+	{
+		// Wait or RunからJumpに遷移する
+		this.animator.SetBool(key_isRun, true);
+		float x = GetRightInput();
+		for (int i = 0;i < Math.Floor(x);i++)
+        {
+			this.transform.Translate(1, 0, 0);
+			yield return new WaitForSeconds(0.5f);
+		}
+		
 		// JumpからWait or Runに遷移する
 		Invoke("DelayMethod", 0.05f);
 	}
 	
-	public void Runy()
-	{
-		// Wait or RunからJumpに遷移する
-		this.animator.SetBool(key_isRun, true);
+	public float GetLeftInput()
+    {
 		string numStr = runy.text.ToString();
 		if (numStr == "") numStr = "0";
 		float y = float.Parse(numStr);
-		if(y >= 10)
+		if (y >= 10)
 		{
 			y = 10;
 		}
-		this.transform.Translate(-y,0,0);
+		return y;
+	}
+
+	public IEnumerator Runy()
+	{
+		// Wait or RunからJumpに遷移する
+		this.animator.SetBool(key_isRun, true);
+		float x = GetLeftInput();
+		for (int i = 0; i < Math.Floor(x); i++)
+		{
+			this.transform.Translate(-1, 0, 0);
+			yield return new WaitForSeconds(0.5f);
+		}
+
 		// JumpからWait or Runに遷移する
 		Invoke("DelayMethod", 0.05f);
 	}
+
 	void DelayMethod()
     {
         this.animator.SetBool(key_isJumpup, false);

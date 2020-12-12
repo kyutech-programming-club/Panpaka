@@ -44,10 +44,24 @@ public class RunCommand : MonoBehaviour
                     C.transform.Translate(0, -2, 0);
                     break;
                 case "rightRun":
-                    C.GetComponent<UnityChanAttempt>().Runx();
+                    {
+                        float x = C.GetComponent<UnityChanAttempt>().GetRightInput();
+                        for (int i = 0; i < Math.Floor(x); i++)
+                        {
+                            C.GetComponent<UnityChanAttempt>().RightRun();
+                            yield return new WaitForSeconds(1.0f);
+                        }
+                    }
                     break;
                 case "leftRun":
-                    C.GetComponent<UnityChanAttempt>().Runy();
+                    {
+                        float x = C.GetComponent<UnityChanAttempt>().GetLeftInput();
+                        for (int i = 0; i < Math.Floor(x); i++)
+                        {
+                            C.GetComponent<UnityChanAttempt>().LeftRun();
+                            yield return new WaitForSeconds(1.0f);
+                        }
+                    }
                     break;
                 case "if":
                     C.GetComponent<UnityChanAttempt>().ActivateOnCollisionStay();

@@ -52,11 +52,11 @@ public class DropPlace : MonoBehaviour, IDropHandler
             }
             if (dragObj.CompareTag("rightRun"))
             {
-                C.GetComponent<UnityChanAttempt>().Runx();
+                StartCoroutine(C.GetComponent<UnityChanAttempt>().Runx());
             }
             if (dragObj.CompareTag("leftRun"))
             {
-                C.GetComponent<UnityChanAttempt>().Runy();
+                StartCoroutine(C.GetComponent<UnityChanAttempt>().Runy());
             }
             if (dragObj.CompareTag("if"))
             {
