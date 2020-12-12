@@ -75,6 +75,7 @@ public class RunCommand : MonoBehaviour
                         oldPosition = C.transform.position;
                         foreach (string commandOnWhile in commandsOnWhile)
                         {
+                            CommandText.text = commandOnWhile + "(whileの中)";
                             switch (commandOnWhile)
                             {
                                 case "right":
