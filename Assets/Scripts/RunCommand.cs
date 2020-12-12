@@ -55,24 +55,23 @@ public class RunCommand : MonoBehaviour
                     C.GetComponent<UnityChanAttempt>().DeactivateOnCollisionStay();
                     break;
                 case "while":
-                    while(true)
+                    GameObject whileCommand = commandObj.transform.GetChild(1).gameObject;
+                    GameObject[] ChildObjects = new GameObject[whileCommand.transform.childCount];
+
+                    for (int i = 0; i < whileCommand.transform.childCount; i++)
                     {
-                        GameObject whileCommand = commandObj.transform.GetChild(1).gameObject;
-                        GameObject[] ChildObjects = new GameObject[whileCommand.transform.childCount];
+                        ChildObjects[i] = whileCommand.transform.GetChild(i).gameObject;
+                    }
+                    string[] commandsOnWhile = new string[ChildObjects.Length];
+                    Array.Sort(ChildObjects, (a, b) => (int)b.transform.position.y - (int)a.transform.position.y);
 
-                        for (int i = 0; i < whileCommand.transform.childCount; i++)
-                        {
-                            ChildObjects[i] = whileCommand.transform.GetChild(i).gameObject;
-                        }
-                        string[] commandsOnWhile = new string[ChildObjects.Length];
-                        Array.Sort(ChildObjects, (a, b) => (int)b.transform.position.y - (int)a.transform.position.y);
-
-                        for (int i = 0; i < ChildObjects.Length; i++)
-                        {
-                            commandsOnWhile[i] = ChildObjects[i].tag;
-                            CommandCount.Add();
-                        }
-
+                    for (int i = 0; i < ChildObjects.Length; i++)
+                    {
+                        commandsOnWhile[i] = ChildObjects[i].tag;
+                        CommandCount.Add();
+                    }
+                    while (true)
+                    {
                         oldPosition = C.transform.position;
                         foreach (string commandOnWhile in commandsOnWhile)
                         {
